@@ -28,7 +28,6 @@ export default class App extends Component<{}> {
                             <Text style={styles.TextStyle}>{item.id}) {item.preview} {item.text} </Text>
 
 
-
                             {/*vote*/}
                             <View style={styles.voteView}>
 
