@@ -13,20 +13,72 @@ export default class App extends Component<{}> {
 
 
             <ScrollView style={styles.MainContainer}>
+
                 {shuffle(initialArr).map((item, key) => {
 
                     return (
-
 
                         <View key={key} style={{backgroundColor: '#f1f1f1'}}>
 
                             <Text style={styles.textWhite}>
 
-                                <Image source={emoji_images[key].p} />
+                                <Image style={styles.emoji} source={emoji_images[key].p} />
 
                                 </Text>
                             <Text style={styles.TextStyle}>{item.id}) {item.preview} {item.text} </Text>
+
+
+
+                            {/*vote*/}
+                            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#ffffff', borderBottomColor: '#aecdce',
+                                borderBottomWidth: 1}}>
+
+                                <View style={{width: 50, height: 50}}>
+
+                                    <Text style={styles.voteNumber}>
+                                        + 0
+                                    </Text>
+
+                                </View>
+
+
+                                <View style={{width: 50, height: 50}}>
+
+                                    <Text style={styles.textWhite}>
+
+                                        <Image style={styles.emoji_thumb}
+                                               source={require('./images/Thumbs_Up_Hand_Sign_Emoji_42x42.png')}
+                                        />
+                                    </Text>
+                                </View>
+
+
+                                <View style={{width: 50, height: 50}}>
+
+
+                                    <Text style={styles.textWhite}>
+
+                                        <Image style={styles.emoji_thumb}
+                                               source={require('./images/Thumbs_Down_Sign_Emoji_Icon_42x42.png')}
+                                        />
+
+                                    </Text>
+
+                                </View>
+
+
+                                <View style={{width: 50, height: 50}}>
+
+                                    <Text style={styles.voteNumber}>
+                                        - 0
+                                    </Text>
+
+                                </View>
+
+                            </View>
+
                         </View>
+
 
                     );
                 })}
@@ -182,12 +234,35 @@ const styles = StyleSheet.create({
 
     textWhite:{
 
-        backgroundColor: '#ffffff',
-        paddingTop: 15,
-        paddingBottom: 5,
-        marginBottom: 3,
         textAlign: 'center',
-        fontSize : 25
+
+        paddingTop: 15
+
+    },
+
+    voteNumber: {
+
+        paddingTop: 15,
+        textAlign: 'center',
+    },
+
+    emoji: {
+
+
+        marginTop: 25,
+        width: 100,
+        height: 100
+    },
+
+    emoji_thumb: {
+
+        width: 70,
+        height: 70
+    },
+
+    separator: {
+
+        marginTop: 25,
     }
 
 });
