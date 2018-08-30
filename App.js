@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
 
-import { StyleSheet, ScrollView, Button, Text, View, Alert } from 'react-native';
+import { StyleSheet, ScrollView, Image, Text, View, Alert } from 'react-native';
 
 export default class App extends Component<{}> {
 
     render() {
 
+        // mix emoji
+        shuffle(emoji_images);
 
         return (
 
+
             <ScrollView style={styles.MainContainer}>
                 {shuffle(initialArr).map((item, key) => {
+
                     return (
+
 
                         <View key={key} style={{backgroundColor: '#f1f1f1'}}>
 
-                            <Text style={styles.textWhite}> {item.emoji} </Text>
+                            <Text style={styles.textWhite}>
+
+                                <Image source={emoji_images[key].p} />
+
+
+                                </Text>
                             <Text style={styles.TextStyle}>{item.id}) {item.preview} {item.text} </Text>
                         </View>
 
@@ -122,6 +132,52 @@ let initialArr = [
     },
 
 ];
+
+let emoji_images = [
+
+    {
+        p: require('./images/Heart_Eyes_Emoji_42x42.png'),
+    },
+
+    {
+        p: require('./images/Relieved_Emoji_Icon_42x42.png'),
+    },
+
+
+
+    {
+        p: require('./images/Slightly_Smiling_Face_Emoji_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Smiling_Emoji_with_Eyes_Opened_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Smiling_Emoji_with_Smiling_Eyes_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Smiling_Face_Emoji_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Smiling_Face_with_Tightly_Closed_eyes_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Smiling_with_Sweat_Emoji_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Tongue_Out_Emoji_with_Winking_Eye_Icon_42x42.png'),
+    },
+
+    {
+        p: require('./images/Upside-Down_Face_Emoji_Icon_42x42.png'),
+    }
+
+]
 
 
 const styles = StyleSheet.create({
