@@ -30,8 +30,7 @@ export default class App extends Component<{}> {
 
 
                             {/*vote*/}
-                            <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between', backgroundColor: '#ffffff', borderBottomColor: '#aecdce',
-                                borderBottomWidth: 1}}>
+                            <View style={styles.voteView}>
 
                                 <View style={{width: 50, height: 50}}>
 
@@ -263,6 +262,16 @@ const styles = StyleSheet.create({
     separator: {
 
         marginTop: 25,
+    },
+
+    voteView: {
+
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#ffffff',
+        borderBottomColor: '#aecdce',
+        borderBottomWidth: 1
     }
 
 });
