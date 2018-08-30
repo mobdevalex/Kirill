@@ -13,14 +13,11 @@ export default class App extends Component<{}> {
                 {shuffle(initialArr).map((item, key) => {
                     return (
 
-
-
                         <View key={key} style={{backgroundColor: '#f1f1f1'}}>
 
                             <Text style={styles.textWhite}> {item.emoji} </Text>
                             <Text style={styles.TextStyle}>{item.id}) {item.preview} {item.text} </Text>
                         </View>
-
 
                     );
                 })}
