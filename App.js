@@ -24,7 +24,6 @@ export default class App extends Component<{}> {
 
                                 <Image source={emoji_images[key].p} />
 
-
                                 </Text>
                             <Text style={styles.TextStyle}>{item.id}) {item.preview} {item.text} </Text>
                         </View>
@@ -61,14 +60,12 @@ function shuffle(arra1) {
 let initialArr = [
     {
         id: 1,
-        emoji: '🤣',
         preview: "Can a kangaroo jump higher than a house?\n\n",
         text: "Of course, a house doesn’t jump at all."
     },
 
     {
         id: 2,
-        emoji: '😂',
         preview: "Doctor: \"I'm sorry but you suffer from a terminal illness and have only 10 to live.\n\n",
 
         text: "Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\n" +
@@ -77,56 +74,48 @@ let initialArr = [
 
     {
         id: 3,
-        emoji: '😁',
         preview: "A man asks a farmer near a field, “Sorry sir, would you mind if I crossed your field instead of going around it? You see, I have to catch the 4:23 train.”\n\n",
         text: "The farmer says, “Sure, go right ahead. And if my bull sees you, you’ll even catch the 4:11 one.”"
     },
 
     {
         id: 4,
-        emoji: '😀',
         preview: "A man asks a farmer near a field, “Sorry sir, would you mind if I crossed your field instead of going around it? You see, I have to catch the 4:23 train.”\n\n",
         text: "The farmer says, “Sure, go right ahead. And if my bull sees you, you’ll even catch the 4:11 one.”\n"
     },
 
     {
         id: 5,
-        emoji: '😃',
         preview: "Anton, do you think I’m a bad mother?\n\n",
         text: "My name is Paul."
     },
 
     {
         id: 6,
-        emoji: '😅',
         preview: "My dog used to chase people on a bike a lot. It got so bad,\n\n",
         text: "finally I had to take his bike away.\n"
     },
 
     {
         id: 7,
-        emoji: '😆',
         preview: "What is the difference between a snowman and a snowwoman?\n\n",
         text: "Snowballs\n"
     },
 
     {
         id: 8,
-        emoji: '😉',
         preview: "Mom, where do tampons go?\n\n",
         text: "\"Where the babies come from, darling.\" \n\n In the stork? \n"
     },
 
     {
         id: 9,
-        emoji: '😊',
         preview: "My wife suffers from a drinking problem.\n\n Oh is she an alcoholic? \n\n",
         text: "No, I am, but she’s the one who suffers.\n"
     },
 
     {
         id: 10,
-        emoji: '😋',
         preview: "I managed to lose my rifle when I was in the army. I had to pay $855 to cover the loss. \n\n",
         text: "I’m starting to understand why a Navy captain always goes down with his ship."
     },
@@ -142,8 +131,6 @@ let emoji_images = [
     {
         p: require('./images/Relieved_Emoji_Icon_42x42.png'),
     },
-
-
 
     {
         p: require('./images/Slightly_Smiling_Face_Emoji_Icon_42x42.png'),
