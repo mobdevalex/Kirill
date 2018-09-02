@@ -31,7 +31,13 @@ export default class App extends Component<{}> {
 
         //textValue: '+1';
 
-        this.key.text.ref.textValue = '1';
+        //this.key.text.ref.textValue = '1';
+
+        // ???????
+        this.state = {
+            textValue : '1'
+        }
+
         //this.text = '1'
 
         //this.ref.textValue = '+1';
