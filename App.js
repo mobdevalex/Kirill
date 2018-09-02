@@ -31,18 +31,13 @@ export default class App extends Component<{}> {
                             {/*vote*/}
                             <View style={styles.voteView}>
 
-                                <View style={{width: 50, height: 50}}>
-
-                                    <Text style={styles.voteNumber}>
-                                        + 0
-                                    </Text>
-
-                                </View>
 
 
-                                <View style={{width: 50, height: 50}}>
+                                <View style={{width: 60, height: 60}}>
 
                                     <Text style={styles.textWhite}>
+
+                                            + 0 &nbsp;
 
                                         <Image style={styles.emoji_thumb}
                                                source={require('./images/Thumbs_Up_Hand_Sign_Emoji_42x42.png')}
@@ -51,7 +46,7 @@ export default class App extends Component<{}> {
                                 </View>
 
 
-                                <View style={{width: 50, height: 50}}>
+                                <View style={{width: 60, height: 60}}>
 
 
                                     <Text style={styles.textWhite}>
@@ -60,18 +55,14 @@ export default class App extends Component<{}> {
                                                source={require('./images/Thumbs_Down_Sign_Emoji_Icon_42x42.png')}
                                         />
 
+                                        &nbsp; - 0
+
                                     </Text>
 
                                 </View>
 
 
-                                <View style={{width: 50, height: 50}}>
 
-                                    <Text style={styles.voteNumber}>
-                                        - 0
-                                    </Text>
-
-                                </View>
 
                             </View>
 
@@ -236,12 +227,6 @@ const styles = StyleSheet.create({
 
         paddingTop: 15
 
-    },
-
-    voteNumber: {
-
-        paddingTop: 15,
-        textAlign: 'center',
     },
 
     emoji: {
