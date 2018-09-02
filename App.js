@@ -1,8 +1,46 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import { StyleSheet, ScrollView, Image, Text, View, Alert } from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, TouchableHighlight, View, Alert} from 'react-native';
 
 export default class App extends Component<{}> {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            textValue: '0'
+        }
+        this.onPressButton = this.onPressButton.bind(this);
+    }
+
+    onPressButton(key) {
+
+        // this.setState({
+        //
+        //     textValue: '+1' + key
+        // })
+
+
+        // this.setState({
+        //
+        //     // '+1' +
+        //     textValue:  key
+        // })
+
+        //Alert.alert(key.toString());
+
+        //textValue: '+1';
+
+        this.key.text.ref.textValue = '1';
+        //this.text = '1'
+
+        //this.ref.textValue = '+1';
+
+        //this.setState( `marker-` + key: '+1' )
+
+        //this.setState({selectedMarkerIndex: '+1'});
+
+    }
 
     render() {
 
@@ -22,9 +60,10 @@ export default class App extends Component<{}> {
 
                             <Text style={styles.textWhite}>
 
-                                <Image style={styles.emoji} source={emoji_images[key].p} />
 
-                                </Text>
+                                <Image style={styles.emoji} source={emoji_images[key].p}/>
+
+                            </Text>
                             <Text style={styles.TextStyle}>{item.id}) {item.preview} {item.text} </Text>
 
 
@@ -32,21 +71,32 @@ export default class App extends Component<{}> {
                             <View style={styles.voteView}>
 
 
+                                <View style={{width: 120, height: 60}}>
 
-                                <View style={{width: 60, height: 60}}>
+                                    <TouchableHighlight onPress={() => this.onPressButton(item.id)}>
 
-                                    <Text style={styles.textWhite}>
+                                        <Text style={styles.textWhite}>
+                                            {/* key={`marker-${item.id}`} */}
+                                            {/* this.state.textValue */}
+                                            <Text ref={item.id} key={item.id}
+                                                  style={{color: 'red', fontSize: 20}}> {this.state.textValue} </Text>
 
-                                            + 0 &nbsp;
 
-                                        <Image style={styles.emoji_thumb}
-                                               source={require('./images/Thumbs_Up_Hand_Sign_Emoji_42x42.png')}
-                                        />
-                                    </Text>
+                                            <Text>
+                                                <Image style={styles.emoji_thumb}
+                                                       source={require('./images/Thumbs_Up_Hand_Sign_Emoji_42x42.png')}
+                                                />
+                                            </Text>
+
+                                        </Text>
+
+                                    </TouchableHighlight>
+
+                                    {/*<Button title= 'Change Text' onPress= {this.onPressButton}/>*/}
                                 </View>
 
 
-                                <View style={{width: 60, height: 60}}>
+                                <View style={{width: 120, height: 60}}>
 
 
                                     <Text style={styles.textWhite}>
@@ -60,8 +110,6 @@ export default class App extends Component<{}> {
                                     </Text>
 
                                 </View>
-
-
 
 
                             </View>
@@ -110,7 +158,7 @@ let initialArr = [
         preview: "Doctor: \"I'm sorry but you suffer from a terminal illness and have only 10 to live.\n\n",
 
         text: "Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\n" +
-                "\n Doctor: \"Nine.\"\n"
+            "\n Doctor: \"Nine.\"\n"
     },
 
     {
@@ -216,12 +264,12 @@ const styles = StyleSheet.create({
 
     },
 
-    TextStyle:{
-        fontSize : 25,
+    TextStyle: {
+        fontSize: 25,
         textAlign: 'center'
     },
 
-    textWhite:{
+    textWhite: {
 
         textAlign: 'center',
 
