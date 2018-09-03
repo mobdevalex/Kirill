@@ -1,52 +1,13 @@
 import React, {Component} from 'react';
 
-import {Image, ScrollView, StyleSheet, Text, TouchableHighlight, View, Alert} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, TouchableHighlight, View} from 'react-native';
 
 export default class App extends Component<{}> {
 
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            textValue: '0'
-        }
-        this.onPressButton = this.onPressButton.bind(this);
-    }
-
-    onPressButton(key) {
-
-        // this.setState({
-        //
-        //     textValue: '+1' + key
-        // })
+// https://stackoverflow.com/questions/48206819/react-nativehow-to-get-text-value-on-a-button-click
 
 
-        // this.setState({
-        //
-        //     // '+1' +
-        //     textValue:  key
-        // })
-
-        //Alert.alert(key.toString());
-
-        //textValue: '+1';
-
-        //this.key.text.ref.textValue = '1';
-
-        // ???????
-        this.state = {
-            textValue : '1'
-        }
-
-        //this.text = '1'
-
-        //this.ref.textValue = '+1';
-
-        //this.setState( `marker-` + key: '+1' )
-
-        //this.setState({selectedMarkerIndex: '+1'});
-
-    }
 
     render() {
 
@@ -79,13 +40,15 @@ export default class App extends Component<{}> {
 
                                 <View style={{width: 120, height: 60}}>
 
-                                    <TouchableHighlight onPress={() => this.onPressButton(item.id)}>
+                                    {/*onPress={() => this.onPressButton}*/}
+                                    <TouchableHighlight>
 
                                         <Text style={styles.textWhite}>
+
                                             {/* key={`marker-${item.id}`} */}
                                             {/* this.state.textValue */}
-                                            <Text ref={item.id} key={item.id}
-                                                  style={{color: 'red', fontSize: 20}}> {this.state.textValue} </Text>
+
+                                            <Text style={{color: 'red', fontSize: 20}}> 0 </Text>
 
 
                                             <Text>
