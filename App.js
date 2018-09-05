@@ -219,8 +219,7 @@ export default class App extends Component<{}> {
 
                                 <View style={{width: 120, height: 60}}>
 
-                                    {/* disabled={() => this.disableTouch(key)} */}
-                                    {/*onPress={() => this.onPressButton}*/}
+                                    {/* start + */}
                                     <TouchableHighlight onPress={() => this.votePlus(key)}>
 
                                         <Text style={styles.textWhite}>
@@ -246,13 +245,14 @@ export default class App extends Component<{}> {
 
                                     </TouchableHighlight>
 
-                                    {/*<Button title= 'Change Text' onPress= {this.onPressButton}/>*/}
+                                    {/* end + */}
                                 </View>
 
 
                                 <View style={{width: 120, height: 60}}>
 
 
+                                    {/* start - */}
                                     <TouchableHighlight onPress={() => this.voteMinus(key)}>
 
                                         <Text style={styles.textWhite}>
@@ -277,6 +277,7 @@ export default class App extends Component<{}> {
                                         </Text>
 
                                     </TouchableHighlight>
+                                    {/* end - */}
 
                                 </View>
 
@@ -295,6 +296,7 @@ export default class App extends Component<{}> {
     }
 }
 
+// mix mix
 function shuffle(arra1) {
 
 
@@ -315,90 +317,6 @@ function shuffle(arra1) {
 }
 
 
-let initialArr_ = [
-    {
-        id: 1,
-        preview: "Can a kangaroo jump higher than a house?\n\n",
-        text: "Of course, a house doesn’t jump at all.",
-        vote_pluse: 1,
-        vote_minus: 0
-    },
-
-    {
-        id: 2,
-        preview: "Doctor: \"I'm sorry but you suffer from a terminal illness and have only 10 to live.\n\n",
-
-        text: "Patient: \"What do you mean, 10? 10 what? Months? Weeks?!\"\n" +
-            "\n Doctor: \"Nine.\"\n",
-        vote_pluse: 0,
-        vote_minus: 2
-    },
-
-    {
-        id: 3,
-        preview: "A man asks a farmer near a field, “Sorry sir, would you mind if I crossed your field instead of going around it? You see, I have to catch the 4:23 train.”\n\n",
-        text: "The farmer says, “Sure, go right ahead. And if my bull sees you, you’ll even catch the 4:11 one.”",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 4,
-        preview: "A man asks a farmer near a field, “Sorry sir, would you mind if I crossed your field instead of going around it? You see, I have to catch the 4:23 train.”\n\n",
-        text: "The farmer says, “Sure, go right ahead. And if my bull sees you, you’ll even catch the 4:11 one.”\n",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 5,
-        preview: "Anton, do you think I’m a bad mother?\n\n",
-        text: "My name is Paul.",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 6,
-        preview: "My dog used to chase people on a bike a lot. It got so bad,\n\n",
-        text: "finally I had to take his bike away.\n",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 7,
-        preview: "What is the difference between a snowman and a snowwoman?\n\n",
-        text: "Snowballs\n",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 8,
-        preview: "Mom, where do tampons go?\n\n",
-        text: "\"Where the babies come from, darling.\" \n\n In the stork? \n",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 9,
-        preview: "My wife suffers from a drinking problem.\n\n Oh is she an alcoholic? \n\n",
-        text: "No, I am, but she’s the one who suffers.\n",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-    {
-        id: 10,
-        preview: "I managed to lose my rifle when I was in the army. I had to pay $855 to cover the loss. \n\n",
-        text: "I’m starting to understand why a Navy captain always goes down with his ship.",
-        vote_pluse: 0,
-        vote_minus: 0
-    },
-
-];
 
 let emoji_images = [
 
